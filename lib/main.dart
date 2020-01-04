@@ -270,7 +270,36 @@ class CardScrollWidget extends StatelessWidget {
                     fit: StackFit.expand,
                     children: <Widget>[
                       Image.asset(img, fit: BoxFit.cover),
-                      
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                              child: Text(
+                                title[i],
+                                style: TextStyle(color: Colors.white,fontSize: 25.0, fontFamily: "SF-Pro-Text-Regular"),
+                              ),
+                            ),
+                            SizedBox(height: 10.0,),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                left: 12.0, bottom: 12.0
+                              ),
+                              child: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
+                                decoration: BoxDecoration(color: Colors.blueAccent,borderRadius: BorderRadius.circular(20.0)),
+                                child: Text(
+                                  "Read Later",
+                                  style: TextStyle(color: Colors.white,),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
